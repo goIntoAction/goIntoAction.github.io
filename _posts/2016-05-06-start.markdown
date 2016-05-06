@@ -1,0 +1,12 @@
+---
+layout:     post
+title:      "Example Post with Code Highlight"
+subtitle:   "试下"
+date:       2015-05-25
+author:     "goIntoAction"
+header-img: "img/post-bg-js-module.jpg"
+tags:
+    - 生活
+---
+
+test
