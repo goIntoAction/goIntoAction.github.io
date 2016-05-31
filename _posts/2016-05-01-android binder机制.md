@@ -1,5 +1,5 @@
 ---
-layout:     keynote
+layout:     post
 title:      "android binder机制"
 subtitle:   ""
 date:       2016-05-01
