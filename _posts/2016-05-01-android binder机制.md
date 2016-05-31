@@ -4,7 +4,7 @@ title:      "android binder机制"
 subtitle:   ""
 date:       2016-05-01
 author:     "goIntoAction"
-header-img: "img/post-bg-2015.jpg"
+header-img: "img/post-bg.jpg"
 tags:
     - android源码分析
 ---
