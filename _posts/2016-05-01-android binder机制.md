@@ -10,7 +10,6 @@ tags:
 ---
 
 
-> 下滑这里查看更多内容
 
 binder是粘合剂的英文，是Android系统进程间通信（IPC）方式之一。在android系统中，它就是各组件，应用之间的粘合剂。android基本上的跨进程通讯都是使用了binder。
 
