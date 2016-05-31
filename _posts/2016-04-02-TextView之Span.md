@@ -1,13 +1,24 @@
+---
+layout:     post
+title:      "TextView之span"
+subtitle:   ""
+date:       2016-05-29
+author:     "goIntoAction"
+header-img: "img/post-bg.jpg"
+tags:
+    - android源码分析
+---
+
 Span是TextView实现简单富文本效果的辅助类。常见的Span类有ImageSpan、URLSpan、TypefaceSpan等，分别实现显示图片和表情、超链接、不同字体。一段文字可以有一个或者多个Span。
 文本的Span需要一个统一的管理者，这个就是Spanned。Spanned的是一个接口，定义来了获取Span的相关方法。Spannable是Spanned的子接口，主要定义了修改文本Span的方法如：setSpan、removeSpan。TextView中最常用的是其两个子类SpannableStringBuilder、和SpannableString。SpannableStringBuilder支持可编辑文本，SpannableString支持不可编辑文本。
-SpannableString和SpannableStringBuilder的基本类图：
+SpannableString和SpannableStringBuilder的基本类图：<br/>
 ![span1.png](/img/in-post/span/span1.png)
 
 如上图所示，SpannableStringBuilder继承了Editable所以可以编辑，SpannableString和SpannableStringBuilder都继承了CharSequence，所以可以直接传给TextView显示。
 
 Span的显示过程
 TextView的文本绘制主要是由在Layout中实现的，下面以ImageSpan为例，来看看Layout是如何处理Span的。
-ImageSpan的类关系图：
+ImageSpan的类关系图：<br/>
 ![span2.png](/img/in-post/span/span2.png)
 
 
@@ -178,7 +189,7 @@ ImageSpan是ReplacementSpan的子类，根据上面的代码分析，ImageSpan�
     
 URLSpan
 URLSpan是很非常常用的一种Span。它的主要功能是在文本中突出显示超链接，点击链接跳转到对应的处理应用。
-
+<br/>
 ![span3.png](/img/in-post/span/span3.png)
 
 从上面的类图可以看出来，URLSpan是ClickableSpan的子类，也是CharacterStyle的子类，将会继承updateDrawState和onClick方法。updateDrawState可以修改TextPaint的属性，实现修改字体颜色、下划线等效果，onClick可以实现点击效果，处理点击动作。
