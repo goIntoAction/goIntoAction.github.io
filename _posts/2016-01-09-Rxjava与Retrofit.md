@@ -10,9 +10,9 @@ tags:
 ---
 2015年至今，Android界什么开源库最火，在我看来是RxJava和Retrofit。
 RxJava 是一个响应式编程框架，采用观察者设计模式，其实这模式之前已经被微软在.net上实现了，NextFlix按照这种思想将其移植到基于jvm的语言上，在RxJava中有四个重要的概念，分别是Observable (可观察者)、 Observer (观察者)、 subscribe (订阅)、事件。Observer通过subscribe()订阅Observable，Observable会发出事件触发Observer。其中Observer有三个方法提供给Observable触发：
-+ onNext() 每发出一个事件的时候触发
-+ onCompleted() 事件队列完成时触发。
-+ onError() 发生错误的时候触发
+- onNext() 每发出一个事件的时候触发
+- onCompleted() 事件队列完成时触发。
+- onError() 发生错误的时候触发
 
 Retrofit是一套RESTful网络框架，是由Android界鼎鼎有名的Jake Wharton主导开发的，使用它访问网络非常方便。在Retrofit中你只要定义一个普通的接口，加上相应的注解，就能被转换为一个网络接口。
 
